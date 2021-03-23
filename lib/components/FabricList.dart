@@ -11,9 +11,8 @@ class FabricList extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Fabric> fabrics = fabricBrain.getFabrics();
     return Container(
-      width: 1400.0,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Wrap(
+        spacing: 50.0,
         children: [
           FabricItem(
             child: fabrics[0],

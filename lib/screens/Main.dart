@@ -10,12 +10,23 @@ class Main extends StatelessWidget {
       backgroundColor: Color.fromRGBO(215, 127, 124, 1),
       body: SafeArea(
         child: Container(
-          width: 1200.0,
+          margin: EdgeInsets.fromLTRB(
+            200.0,
+            100.0,
+            0,
+            0,
+          ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               FabricList(),
-              FabricDescription(),
+              SizedBox(
+                height: 20.0,
+              ),
+              Container(
+                width: 800.0,
+                child: FabricDescription(),
+              ),
             ],
           ),
         ),
