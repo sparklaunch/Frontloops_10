@@ -1,21 +1,17 @@
 import "package:flutter/material.dart";
 
+import "package:frontloops_10/components/Instruction.dart";
+
 class InstructionBox extends StatelessWidget {
-  final String title;
-  final String description;
-  final Color backgroundColor;
-  InstructionBox({
-    @required this.title,
-    @required this.description,
-    this.backgroundColor = Colors.black,
-  });
+  final Instruction child;
+  InstructionBox({@required this.child});
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 360.0,
       height: 360.0,
       decoration: BoxDecoration(
-        color: this.backgroundColor,
+        color: this.child.getBackgroundColor(),
       ),
       child: Center(
         child: Transform.translate(
@@ -25,7 +21,7 @@ class InstructionBox extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                this.title,
+                this.child.getTitle(),
                 style: TextStyle(
                   color: Color.fromRGBO(215, 127, 124, 1),
                   fontSize: 24.0,
@@ -35,7 +31,7 @@ class InstructionBox extends StatelessWidget {
                 height: 10.0,
               ),
               Text(
-                this.description,
+                this.child.getDescription(),
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 36.0,
