@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import "package:frontloops_10/screens/Prelude.dart";
 import "package:frontloops_10/screens/Main.dart";
 
 void main() {
@@ -8,7 +9,8 @@ void main() {
       title: "Frontloops 10",
       initialRoute: "/",
       routes: {
-        "/": (context) => Main(),
+        "/": (context) => Prelude(),
+        "/main": (context) => Main(),
       },
     ),
   );
