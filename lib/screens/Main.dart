@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 
 import "package:frontloops_10/components/FabricList.dart";
+import "package:frontloops_10/components/Instructions.dart";
 import "package:frontloops_10/components/FabricDescription.dart";
 
 class Main extends StatelessWidget {
@@ -27,6 +28,10 @@ class Main extends StatelessWidget {
                 width: 800.0,
                 child: FabricDescription(),
               ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Instructions(),
             ],
           ),
         ),
