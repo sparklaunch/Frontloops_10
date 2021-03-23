@@ -7,4 +7,11 @@ class Fabric {
     this._name = name;
     this._isActive = isActive;
   }
+  String getName() {
+    return this._name;
+  }
+
+  bool checkActivity() {
+    return this._isActive;
+  }
 }
